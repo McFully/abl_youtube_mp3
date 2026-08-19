@@ -1,9 +1,12 @@
-# 01.01 Resumen Ejecutivo y Modelo de Negocio - ABL Youtube
+# RESUMEN EJECUTIVO Y MODELO DE NEGOCIO
 
-## Visión del Producto
-ABL Youtube es una herramienta desktop ejecutable de alta velocidad diseñada para la extracción automatizada y conversión masiva de contenido de audio desde canales, vídeos y playlists de YouTube a archivos MP3 de máxima fidelidad (320kbps equivalent).
+## 1. VISIÓN GENERAL
+- **Nombre del Producto:** ABL Youtube MP3 2º Edicion
+- **Categoría Operativa:** ABL Software
+- **Clasificación Tecnológica:** Desktop software
+- **Objetivo Estratégico:** Proveer una solución integral, robusta y de alto rendimiento optimizada para su entorno de despliegue.
 
-## Propósito y Casos de Uso
-1. **Colecciones y Listas de Reproducción**: Permite procesar álbumes y conjuntos de vídeos completos con un solo clic.
-2. **Uso Offline**: Descarga directa en carpetas locales especificadas por el usuario.
-3. **Cero Dependencias Externas Previas**: La aplicación detecta e instala automáticamente los binarios de `yt-dlp` y `ffmpeg` sin requerir conocimientos técnicos.
+## 2. PÚBLICO OBJETIVO Y CASOS DE USO
+- **Usuarios Principales:** Usuarios finales y administradores que interactúan con el flujo operativo de ABL Youtube MP3 2º Edicion.
+- **Problema que Resuelve:** Centralización, automatización y optimización de flujos de trabajo e interfaces reactivas.
+- **Métricas de Éxito:** Tiempo de carga ultrarrápido, estabilidad cero fallos, accesibilidad universal y fidelidad visual.

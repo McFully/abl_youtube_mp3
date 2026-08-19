@@ -1,21 +1,16 @@
-# 01.02 Arquitectura del Sistema y Diagrama C4 - ABL Youtube
+# ARQUITECTURA DEL SISTEMA Y DIAGRAMA C4
 
-## Diagrama C4 Contenedores y Procesos
+## 1. VISTA DE CONTEXTO (NIVEL 1 C4)
+El sistema **ABL Youtube MP3 2º Edicion** opera como núcleo de procesamiento e interfaz, comunicándose con servicios periféricos y almacenamiento.
 
+```mermaid
+graph TD
+    User["Usuario Final"] -->|Interactúa con UI| App["ABL Youtube MP3 2º Edicion"]
+    App -->|Almacenamiento Local / Estado| Storage["Persistencia Local / Estado"]
+    App -->|Consultas y Servicios| Backend["APIs / Backend / Servicios"]
 ```
-+-----------------------------------------------------------------------------------+
-|                                   ABL Youtube App                                 |
-|                                                                                   |
-|  +-----------------------------+     IPC Channel     +-------------------------+  |
-|  | Renderer Process            | <-----------------> | Main Process            |  |
-|  | (React 19 / Framer Motion)  |                     | (Electron / Node.js ESM)|  |
-|  +-----------------------------+                     +------------+------------+  |
-|                                                                   |               |
-|                                                                   | child_process |
-|                                                                   v               |
-|                                                      +-------------------------+  |
-|                                                      | CLI Binaries            |  |
-|                                                      | (yt-dlp.exe / ffmpeg)   |  |
-|                                                      +-------------------------+  |
-+-----------------------------------------------------------------------------------+
-```
+
+## 2. VISTA DE CONTENEDORES (NIVEL 2 C4)
+- **Capa de Presentación:** Interfaz de usuario basada en componentes reactivos y estilos adaptativos.
+- **Capa Lógica:** Manejo de estado, controladores de eventos y algoritmos de negocio.
+- **Capa de Datos:** Modelos de datos, validación y gestión de persistencia.

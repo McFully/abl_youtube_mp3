@@ -1,6 +1,11 @@
-# 01.04 Patrones de Diseño y Convenciones - ABL Youtube
+# PATRONES DE DISEÑO Y CONVENCIONES
 
-## Patrones Destacados
-1. **Bridge Pattern (`src/platform/bridge.js`)**: Encapsula las invocaciones IPC de Electron permitiendo fallback o mocks si la app se ejecuta fuera de Electron.
-2. **Sequential Queue Pattern**: Las descargas de listas de reproducción procesan las pistas una a una para evitar congestión de red o baneos de IP por abuso de rate limit de YouTube.
-3. **Event-Driven Progress Streaming**: Notificación en tiempo real desde el Main Process al Renderer Process utilizando regex matching sobre `stdout` del proceso hijo `yt-dlp.exe`.
+## 1. PRINCIPIOS DE ARQUITECTURA
+- **Modularidad Atómica:** Separación estricta entre presentación, lógica de dominio y capa de acceso a datos.
+- **SOLID & Clean Architecture:** Componentes puros desacoplados de efectos secundarios globales.
+- **Inmutabilidad del Estado:** Mutaciones predecibles a través de despachos o setters definidos.
+
+## 2. CONVENCIONES DE CÓDIGO
+- **Nombres de Componentes:** PascalCase (`MiComponente.tsx` o `MiComponente.js`).
+- **Nombres de Utilidades y Hooks:** camelCase (`useMiHook.ts`, `calcularTotales.js`).
+- **Tipado Estricto:** Prohibición expresa de tipos laxos (`any`), garantizando cobertura de contratos.

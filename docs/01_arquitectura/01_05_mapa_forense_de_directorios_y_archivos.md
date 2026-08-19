@@ -1,8 +1,145 @@
-# 01.05 Mapa Forense de Directorios y Archivos - ABL Youtube
+# MAPA FORENSE DE DIRECTORIOS Y ARCHIVOS
 
-- **`electron/main.js`**: Proceso Principal Electron con handlers para `window-control`, `select-download-dir`, `get-default-dir`, `check-dependencies`, `download-dependencies`, `start-download` y `cancel-download`.
-- **`electron/preload.js`**: ContextBridge expone `window.electron` con métodos seguros `send`, `invoke` y `on`.
-- **`src/platform/bridge.js`**: Capa de abstracción del frontend que invoca `window.electron`.
-- **`src/App.jsx`**: Vistas, tarjeta glassmorphic, entrada de URL y renderizado animado de la cola de descargas.
-- **`src/index.css`**: Variables CSS globales, diseño glassmorphic y clases utilitarias.
-- **`scripts/build.cjs`**: Script de compilación nativo.
+## 1. INVENTARIO COMPLETO DE ARCHIVOS
+Total de archivos auditados: **140**
+
+- `.gitignore`
+- `ABL Youtube MP3 LOGO.png`
+- `eslint.config.js`
+- `icon.ico`
+- `index.html`
+- `iniciar.bat`
+- `LICENSE.txt`
+- `package-lock.json`
+- `package.json`
+- `vite.config.js`
+- `bin/ffmpeg.exe`
+- `bin/ffprobe.exe`
+- `bin/yt-dlp.exe`
+- `dist-electron/main.js`
+- `dist-electron/preload.js`
+- `docs/01_resumen_ejecutivo_y_producto.md`
+- `docs/02_arquitectura_del_sistema.md`
+- `docs/03_stack_tecnologico_y_dependencias.md`
+- `docs/05_mapa_forense_de_directorios.md`
+- `docs/06_instalacion_y_entorno.md`
+- `docs/07_variables_de_entorno.md`
+- `docs/08_archivos_de_configuracion.md`
+- `docs/11_logica_de_negocio_principal.md`
+- `docs/13_flujo_de_datos_y_eventos.md`
+- `docs/16_catalogo_de_funcionalidades.md`
+- `docs/17_sistema_de_diseno_y_estilos.md`
+- `docs/30_monitoreo_y_registros.md`
+- `docs/31_glosario_tecnico_y_de_negocio.md`
+- `docs/32_deuda_tecnica_y_problemas_conocidos.md`
+- `docs/01_arquitectura/01_01_resumen_ejecutivo_y_modelo_de_negocio.md`
+- `docs/01_arquitectura/01_02_arquitectura_del_sistema_y_diagrama_c4.md`
+- `docs/01_arquitectura/01_03_stack_tecnologico_y_arbol_de_dependencias.md`
+- `docs/01_arquitectura/01_04_patrones_de_diseno_y_convenciones.md`
+- `docs/01_arquitectura/01_05_mapa_forense_de_directorios_y_archivos.md`
+- `docs/04_interfaz_ui_ux/componentes/COMP_AppTitleBar.md`
+- `docs/04_interfaz_ui_ux/componentes/COMP_DownloadGlassPanel.md`
+- `docs/04_interfaz_ui_ux/componentes/COMP_QueueProgressList.md`
+- `docs/04_interfaz_ui_ux/pantallas/VISTA_01_MainDownloader.md`
+- `docs/07_especiales/07_03_ipc_y_procesos_electron.md`
+- `docs/08_guia_reconstruccion/08_01_paso_01_setup_inicial_y_herramientas.md`
+- `electron/main.js`
+- `electron/preload.js`
+- `Instaladores/ABL Youtube Setup 1.0.0.exe`
+- `Instaladores/builder-debug.yml`
+- `Instaladores/latest.yml`
+- `Instaladores/win-unpacked/ABL Youtube.exe`
+- `Instaladores/win-unpacked/chrome_100_percent.pak`
+- `Instaladores/win-unpacked/chrome_200_percent.pak`
+- `Instaladores/win-unpacked/d3dcompiler_47.dll`
+- `Instaladores/win-unpacked/dxcompiler.dll`
+- `Instaladores/win-unpacked/dxil.dll`
+- `Instaladores/win-unpacked/ffmpeg.dll`
+- `Instaladores/win-unpacked/icudtl.dat`
+- `Instaladores/win-unpacked/libEGL.dll`
+- `Instaladores/win-unpacked/libGLESv2.dll`
+- `Instaladores/win-unpacked/LICENSE.electron.txt`
+- `Instaladores/win-unpacked/LICENSES.chromium.html`
+- `Instaladores/win-unpacked/resources.pak`
+- `Instaladores/win-unpacked/snapshot_blob.bin`
+- `Instaladores/win-unpacked/v8_context_snapshot.bin`
+- `Instaladores/win-unpacked/vk_swiftshader.dll`
+- `Instaladores/win-unpacked/vk_swiftshader_icd.json`
+- `Instaladores/win-unpacked/vulkan-1.dll`
+- `Instaladores/win-unpacked/locales/af.pak`
+- `Instaladores/win-unpacked/locales/am.pak`
+- `Instaladores/win-unpacked/locales/ar.pak`
+- `Instaladores/win-unpacked/locales/bg.pak`
+- `Instaladores/win-unpacked/locales/bn.pak`
+- `Instaladores/win-unpacked/locales/ca.pak`
+- `Instaladores/win-unpacked/locales/cs.pak`
+- `Instaladores/win-unpacked/locales/da.pak`
+- `Instaladores/win-unpacked/locales/de.pak`
+- `Instaladores/win-unpacked/locales/el.pak`
+- `Instaladores/win-unpacked/locales/en-GB.pak`
+- `Instaladores/win-unpacked/locales/en-US.pak`
+- `Instaladores/win-unpacked/locales/es-419.pak`
+- `Instaladores/win-unpacked/locales/es.pak`
+- `Instaladores/win-unpacked/locales/et.pak`
+- `Instaladores/win-unpacked/locales/fa.pak`
+- `Instaladores/win-unpacked/locales/fi.pak`
+- `Instaladores/win-unpacked/locales/fil.pak`
+- `Instaladores/win-unpacked/locales/fr.pak`
+- `Instaladores/win-unpacked/locales/gu.pak`
+- `Instaladores/win-unpacked/locales/he.pak`
+- `Instaladores/win-unpacked/locales/hi.pak`
+- `Instaladores/win-unpacked/locales/hr.pak`
+- `Instaladores/win-unpacked/locales/hu.pak`
+- `Instaladores/win-unpacked/locales/id.pak`
+- `Instaladores/win-unpacked/locales/it.pak`
+- `Instaladores/win-unpacked/locales/ja.pak`
+- `Instaladores/win-unpacked/locales/kn.pak`
+- `Instaladores/win-unpacked/locales/ko.pak`
+- `Instaladores/win-unpacked/locales/lt.pak`
+- `Instaladores/win-unpacked/locales/lv.pak`
+- `Instaladores/win-unpacked/locales/ml.pak`
+- `Instaladores/win-unpacked/locales/mr.pak`
+- `Instaladores/win-unpacked/locales/ms.pak`
+- `Instaladores/win-unpacked/locales/nb.pak`
+- `Instaladores/win-unpacked/locales/nl.pak`
+- `Instaladores/win-unpacked/locales/pl.pak`
+- `Instaladores/win-unpacked/locales/pt-BR.pak`
+- `Instaladores/win-unpacked/locales/pt-PT.pak`
+- `Instaladores/win-unpacked/locales/ro.pak`
+- `Instaladores/win-unpacked/locales/ru.pak`
+- `Instaladores/win-unpacked/locales/sk.pak`
+- `Instaladores/win-unpacked/locales/sl.pak`
+- `Instaladores/win-unpacked/locales/sr.pak`
+- `Instaladores/win-unpacked/locales/sv.pak`
+- `Instaladores/win-unpacked/locales/sw.pak`
+- `Instaladores/win-unpacked/locales/ta.pak`
+- `Instaladores/win-unpacked/locales/te.pak`
+- `Instaladores/win-unpacked/locales/th.pak`
+- `Instaladores/win-unpacked/locales/tr.pak`
+- `Instaladores/win-unpacked/locales/uk.pak`
+- `Instaladores/win-unpacked/locales/ur.pak`
+- `Instaladores/win-unpacked/locales/vi.pak`
+- `Instaladores/win-unpacked/locales/zh-CN.pak`
+- `Instaladores/win-unpacked/locales/zh-TW.pak`
+- `Instaladores/win-unpacked/resources/app-update.yml`
+- `Instaladores/win-unpacked/resources/app.asar`
+- `Instaladores/win-unpacked/resources/elevate.exe`
+- `Instaladores/win-unpacked/resources/bin/ffmpeg.exe`
+- `Instaladores/win-unpacked/resources/bin/ffprobe.exe`
+- `Instaladores/win-unpacked/resources/bin/yt-dlp.exe`
+- `public/apple-touch-icon.png`
+- `public/favicon-96x96.png`
+- `public/icon.ico`
+- `public/icon.png`
+- `public/logo.png`
+- `public/web-app-manifest-192x192.png`
+- `public/web-app-manifest-512x512.png`
+- `scripts/build.cjs`
+- `scripts/generate-icons.cjs`
+- `scripts/generate-icons.js`
+- `scripts/noop-sign.cjs`
+- `src/App.jsx`
+- `src/index.css`
+- `src/main.jsx`
+- `src/components/ChannelModal.jsx`
+- `src/platform/bridge.js`
